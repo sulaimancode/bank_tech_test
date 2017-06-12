@@ -35,6 +35,11 @@ To run tests
 $ rspec
 ```
 
+## My approach
+
+I used Ruby in this tech test as it is an object oriented language and I am also comfortable with it.
+For testing I used Rspec.
+
 ## REPL interaction
 
 Make sure you are in the 'bank_tech_test' directory and require all lib files
