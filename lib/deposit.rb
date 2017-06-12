@@ -1,0 +1,4 @@
+class Deposit
+
+  
+end
