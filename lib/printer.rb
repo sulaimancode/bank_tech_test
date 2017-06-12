@@ -1,4 +1,3 @@
-#
 class Printer
   def print(statement)
     header

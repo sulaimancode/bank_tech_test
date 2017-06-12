@@ -1,12 +1,13 @@
-#
 class Transaction
   attr_reader :amount, :made_at
   attr_accessor :account_balance
   attr_writer :type
 
-  def initialize(amount)
+  CURRENT_DATE = Time.now.strftime('%d/%m/%Y')
+
+  def initialize(amount, time = CURRENT_DATE)
     @amount = amount
-    @made_at = Time.now.strftime('%d/%m/%Y')
+    @made_at = time
     @type = nil
   end
 

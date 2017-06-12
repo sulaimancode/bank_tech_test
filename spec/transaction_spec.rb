@@ -2,14 +2,19 @@ require 'transaction'
 
 describe Transaction do
   let(:transaction) { described_class.new(1000) }
+  let(:transaction2) { described_class.new(1000, '02/06/2017')}
 
   describe '::new' do
     it 'has an amount to be transacted' do
       expect(transaction.amount).to eq 1000
     end
 
-    it 'has a timestamp' do
-      expect(transaction.made_at).to eq Time.now.strftime('%d/%m/%Y')
+    it 'has a default timestamp' do
+      expect(transaction.made_at).to eq described_class::CURRENT_DATE
+    end
+
+    it 'can take a specific time as input' do
+      expect(transaction2.made_at).to eq '02/06/2017'
     end
 
     it 'has an account balance of nil' do
