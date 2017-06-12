@@ -1,4 +1,4 @@
-#
+# understands transaction logs
 class BankStatment
   attr_reader :transactions
 
@@ -9,5 +9,4 @@ class BankStatment
   def log(transaction)
     @transactions << transaction
   end
-
 end

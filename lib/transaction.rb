@@ -17,5 +17,4 @@ class Transaction
   def withdrawal?
     @type == 'withdrawal'
   end
-
 end

@@ -1,6 +1,6 @@
-#
 require_relative 'bank_statement'
 require_relative 'printer'
+# understands balance management
 class Account
   attr_reader :balance, :statement, :printer
 
@@ -27,5 +27,4 @@ class Account
   def print_statement
     printer.print(statement.transactions)
   end
-
 end

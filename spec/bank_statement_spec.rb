@@ -16,6 +16,4 @@ describe BankStatment do
       expect(statement.transactions).to include transaction
     end
   end
-
-
 end
