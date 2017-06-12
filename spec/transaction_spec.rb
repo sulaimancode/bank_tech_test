@@ -11,5 +11,9 @@ describe Transaction do
     it 'has a timestamp' do
       expect(transact.made_at).to eq Time.now.strftime('%d/%m/%Y')
     end
+
+    it 'has an account balance of nil' do
+      expect(transact.account_balance).to eq nil
+    end
   end
 end

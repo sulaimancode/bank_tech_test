@@ -6,11 +6,14 @@ class Account
     @balance = 0
   end
 
-  def deposit(amount)
-    @balance += amount
+  def deposit(transaction)
+    @balance += transaction.amount
+    transaction.account_balance = @balance
   end
 
-  def withdraw(amount)
-    @balance -= amount
+  def withdraw(transaction)
+    @balance -= transaction.amount
+    transaction.account_balance = @balance
   end
+
 end
