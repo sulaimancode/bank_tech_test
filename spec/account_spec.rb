@@ -6,6 +6,7 @@ describe Account do
   let(:transaction) { double :transaction, amount: TRANSACTION_AMOUNT }
   before do
     allow(transaction).to receive(:account_balance=)
+    allow(transaction).to receive(:type=)
   end
 
   describe '::new' do
